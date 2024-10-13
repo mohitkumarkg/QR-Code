@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Second_Assignment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <h1 class="a1"> QRCode generate By Mohit</h1>
+    
+    <div class="container">
+        <p>Enter url or text : </p>
+        <input type="text" placeholder="Enter url" id="qrtext">
+
+        <div class="imgBox">
+            <img src="" id ="qrimage">
+        </div>
+
+        <button onclick="generateQR()">generate QR code</button>
+    </div>
+
+
+
+
+
+    <script>
+
+        let imgBox = document.getElementById("imgBox");
+        let qrimage = document.getElementById("qrimage");
+        let qrtext = document.getElementById("qrtext");
+
+
+        function generateQR(){
+            qrimage.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrtext.value;
+
+        }
+
+    </script>
+
+</body>
+</html>
